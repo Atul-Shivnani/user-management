@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# User Management Application
 
-## Getting Started
+This is a simple User Management application built with **Next.js**. The application allows users to view a list of users, view their details, create new users, edit existing users, and delete users.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Listing**: Displays a list of users fetched from the JSONPlaceholder API.
+- **User Details**: Click on a user to view their detailed information.
+- **Create User**: A form to add a new user.
+- **Edit User**: Update the details of an existing user.
+- **Delete User**: Remove a user from the list.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js (React framework)
+- **Styling**: Tailwind CSS
+- **API**: JSONPlaceholder
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/Atul-Shivnani/user-management
+   ```
+2. Navigate to the project directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   cd user-management
+   ```
+3. Install the dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
+4. Run the application:
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   ```
+## API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application uses the JSONPlaceholder API for user data. Here are some example endpoints:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Get Users**: GET https://jsonplaceholder.typicode.com/users
+- **Get User Details**: GET https://jsonplaceholder.typicode.com/users/{id}
+- **Create User**: POST https://jsonplaceholder.typicode.com/users
+- **Update User**: PUT https://jsonplaceholder.typicode.com/users/{id}
+- **Delete User**: DELETE https://jsonplaceholder.typicode.com/users/{id}
+
+## Components
+
+- **Home**: Displays the list of users with options to view details or create a new user.
+- **UserDetails**: Shows detailed information for a specific user and options to edit or delete the user.
+- **CreateUser**: A form to add a new user.
+- **EditUser**: A form to edit an existing user's details.
+
